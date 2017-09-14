@@ -1,1 +1,10 @@
 <h1><%= @machine.location %> Vending Machine</h1>
+
+
+<li> Snacks: <% @machine.snacks.each do |snack| %>
+  <il> Snack name: <%= snack.name %> </il>
+  <il> Snack price: <%= number_to_currency(snack.price) %> </il>
+</li>
+    <% end %>
+
+<a> Average Snack price: <%= number_to_currency(@machine.average_snack_price) %> </a>
